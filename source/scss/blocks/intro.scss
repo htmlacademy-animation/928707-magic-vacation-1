@@ -87,6 +87,11 @@
 }
 
 .intro__message {
+  transition-property: opacity, transform;
+  transition-duration: $a-duration-normal;
+  transition-delay: $a-duration-normal;
+  transform: translateY(20px);
+  opacity: 0;
   flex: none;
   width: 50.9rem;
   max-width: 50%;
@@ -160,5 +165,12 @@
   @media (min-width: $stop-scaling) {
     margin: 0 0 0 -5px;
     font-size: 48px;
+  }
+}
+
+.screen--intro.active {
+  .intro__message {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

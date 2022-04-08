@@ -146,3 +146,16 @@
     }
   }
 }
+
+// form animation
+.chat__footer .form {
+  margin-left: auto;
+  transition: width $a-duration-short;
+  width: 34%;
+}
+
+.screen--game.active {
+  .chat__footer .form {
+    width: 100%;
+  }
+}
